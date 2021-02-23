@@ -1,0 +1,43 @@
+<form [formGroup]="serviceDocument.form" class="normal-form"> 
+ <mat-grid-list cols="2" rowHeight="300px">
+   <mat-grid-tile>
+       <div class="controles-container">
+           <input type="hidden" formControlName="ID_DOCUMENT">
+             <mat-form-field>
+               <input formControlName="EXTENTION" matInput placeholder="Extention*">
+             </mat-form-field>
+             <mat-form-field>
+              <input formControlName="Upload" matInput placeholder="UPLOAD">
+              </mat-form-field>
+              <mat-form-field>
+              <input formControlName="ID_NATURE_DOCUMENT" matInput placeholder="NATURE_DOCUMENT">
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="ID_OPERATEUR_CREATION" matInput placeholder="OPERATEUR_CREATION">
+                </mat-form-field>
+              
+       </div>
+   </mat-grid-tile>
+   <mat-grid-tile>
+    
+               <div class="controles-container">
+      <mat-form-field>
+    <input formControlName="ID_SOUS_GROUPE_DOCUMENT" matInput placeholder="SOUS_GROUPE_DOCUMENT">
+    </mat-form-field>
+    <mat-form-field>
+    <input formControlName="DATE_HEURE_AJOUT" matInput  [matDatepicker]="picker" placeholder="DATE_HEURE_AJOUT">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+    <input formControlName="REF" matInput placeholder="Reference">
+    </mat-form-field>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="onSubmit()" type="submit" [disabled]="serviceDocument.form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+    </div>
+     
+                      </div>
+  </mat-grid-tile>
+   </mat-grid-list>
+</form>

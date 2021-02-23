@@ -1,0 +1,60 @@
+<div class="center-content">
+  <mat-card class="example-card">
+
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Email" value="" [(ngModel)]="credentials.EMAIL">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" value="" [(ngModel)]="credentials.PASSWORD">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+
+          </mat-form-field>
+          <button  mat-raised-button color="primary" (submit)="login()">Login</button>
+        </mat-tab>
+
+        <mat-tab label="Register">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nom</mat-label>
+            <input type="text" matInput placeholder="Nom" value="" [(ngModel)]="credentials.NOM">
+            <mat-icon matSuffix>nom</mat-icon>
+
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Prenom</mat-label>
+            <input type="text" matInput placeholder="Prenom" value="" [(ngModel)]="credentials.PRENOM">
+            <mat-icon matSuffix>prenom</mat-icon>
+
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Email" value="" [(ngModel)]="credentials.EMAIL">
+            <mat-icon matSuffix>email</mat-icon>
+
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" [(ngModel)]="credentials.PASSWORD">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field>
+
+         <!-- <mat-form-field class="example-full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input type="password" matInput placeholder="Confirm Password" value="">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field> -->
+          <button  mat-raised-button color="primary" (submit)="register()">Register</button>
+        </mat-tab>
+      </mat-tab-group>
+
+    </mat-card-content>
+  </mat-card>
+</div>
